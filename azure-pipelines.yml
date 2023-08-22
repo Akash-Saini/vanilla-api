@@ -23,3 +23,17 @@ steps:
     app_location: '/'
     api_location: 'api'
     azure_static_web_apps_api_token: '8c31fba5278c326d715726dae27c3fb9908cf36ae0fe6c714fecfe7906d0b3ac3-e498f565-c52f-47ef-a33f-8b7f50cf9d1c010228550'
+- task: XplatGenerateReleaseNotes@4
+  inputs:
+    outputfile: 'release-note'
+    templateLocation: 'File'
+    dumpPayloadToConsole: false
+    dumpPayloadToFile: false
+    replaceFile: True
+    getParentsAndChildren: False
+    getAllParents: False
+    getIndirectPullRequests: False
+    stopOnError: False
+    considerPartiallySuccessfulReleases: False
+    checkForManuallyLinkedWI: False
+    wiqlFromTarget: 'WorkItems'
